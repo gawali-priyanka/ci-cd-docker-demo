@@ -61,15 +61,15 @@ Steps:
 
 ## Deploy on AWS EC2
 
-sudo yum update -y
-sudo amazon-linux-extras install docker -y
-sudo service docker start
-sudo usermod -aG docker ec2-user
-newgrp docker
+sudo yum update -y <br>
+sudo amazon-linux-extras install docker -y <br>
+sudo service docker start <br>
+sudo usermod -aG docker ec2-user <br>
+newgrp docker <br>
 
-docker login -u <DOCKERHUB_USERNAME>
-docker pull <DOCKERHUB_USERNAME>/ci-cd-demo:latest
-docker run -d -p 80:3000 <DOCKERHUB_USERNAME>/ci-cd-demo:latest
+docker login -u <DOCKERHUB_USERNAME> <br>
+docker pull <DOCKERHUB_USERNAME>/ci-cd-demo:latest <br>
+docker run -d -p 80:3000 <DOCKERHUB_USERNAME>/ci-cd-demo:latest <br>
 
 # Open your browser at http://<EC2-Public-IP>.
 ---
